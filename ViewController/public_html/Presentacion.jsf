@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="Presentacion.jsf" id="d1">
+        <af:form id="f1">
+            <af:panelSplitter id="ps1" splitterPosition="352">
+                <f:facet name="first">
+                    <af:outputText value="Debera cargar cursos y materias." id="ot1"/>
+                </f:facet>
+                <f:facet name="second">
+                    <af:region value="#{bindings.Seguridad1.regionModel}" id="r1"/>
+                </f:facet>
+            </af:panelSplitter>
+        </af:form>
+    </af:document>
+</f:view>

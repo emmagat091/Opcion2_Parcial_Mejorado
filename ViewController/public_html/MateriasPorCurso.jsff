@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core">
+  <af:train value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}" id="t1"/>
+  <af:trainButtonBar value="#{controllerContext.currentViewPort.taskFlowContext.trainModel}" id="tbb1"/>
+  <af:button text="Back" id="b1" action="Back" inlineStyle="color:Red;"/>
+  <af:table value="#{bindings.MateriasView1.collectionModel}" var="row" rows="#{bindings.MateriasView1.rangeSize}"
+            emptyText="#{bindings.MateriasView1.viewable ? 'No data to display.' : 'Access Denied.'}"
+            rowBandingInterval="0" selectedRowKeys="#{bindings.MateriasView1.collectionModel.selectedRow}"
+            selectionListener="#{bindings.MateriasView1.collectionModel.makeCurrent}" rowSelection="single"
+            fetchSize="#{bindings.MateriasView1.rangeSize}" filterModel="#{bindings.MateriasView1Query.queryDescriptor}"
+            filterVisible="true" queryListener="#{bindings.MateriasView1Query.processQuery}" varStatus="vs" id="t2">
+    <af:column sortProperty="#{bindings.MateriasView1.hints.Cursoid.name}" filterable="true" sortable="true"
+               headerText="#{bindings.MateriasView1.hints.Cursoid.label}" id="c1" width="100">
+      <af:selectOneChoice value="#{row.bindings.Cursoid.inputValue}" label="#{row.bindings.Cursoid.label}"
+                          required="#{bindings.MateriasView1.hints.Cursoid.mandatory}"
+                          shortDesc="#{bindings.MateriasView1.hints.Cursoid.tooltip}" readOnly="true" id="soc1">
+        <f:selectItems value="#{row.bindings.Cursoid.items}" id="si1"/>
+        <f:validator binding="#{row.bindings.Cursoid.validator}"/>
+      </af:selectOneChoice>
+    </af:column>
+    <af:column sortProperty="#{bindings.MateriasView1.hints.Nombre.name}" filterable="true" sortable="true"
+               headerText="#{bindings.MateriasView1.hints.Nombre.label}" id="c2" width="132">
+      <af:outputText value="#{row.Nombre}" shortDesc="#{bindings.MateriasView1.hints.Nombre.tooltip}" id="ot1"/>
+    </af:column>
+    <af:column sortProperty="#{bindings.MateriasView1.hints.Duracion.name}" filterable="true" sortable="true"
+               headerText="#{bindings.MateriasView1.hints.Duracion.label}" id="c3" width="135">
+      <af:outputText value="#{row.Duracion}" shortDesc="#{bindings.MateriasView1.hints.Duracion.tooltip}" id="ot2">
+        <af:convertNumber groupingUsed="false" pattern="#{bindings.MateriasView1.hints.Duracion.format}"/>
+      </af:outputText>
+    </af:column>
+  </af:table>
+  <af:spacer id="s1" height="30"/>
+  <af:outputText value="Listado de materias por cursos." id="ot3"/>
+</ui:composition>

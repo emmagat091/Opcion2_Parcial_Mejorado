@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!---->
+<BC4JConfig xmlns="http://xmlns.oracle.com/bc4j/configuration" version="11.1">
+  <AppModuleConfigBag ApplicationName="model.Cursos">
+    <AppModuleConfig name="CursosLocal" jbo.project="model.Model" ApplicationName="model.Cursos" DeployPlatform="LOCAL">
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/Resolucion4DS"/>
+      <Security AppModuleJndiName="model.Cursos"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="CursosShared" jbo.project="model.Model" ApplicationName="model.Cursos"
+                     DeployPlatform="LOCAL">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/Resolucion4DS"/>
+      <Security AppModuleJndiName="model.Cursos"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+  <AppModuleConfigBag ApplicationName="model.Materias">
+    <AppModuleConfig name="MateriasLocal" jbo.project="model.Model" ApplicationName="model.Materias"
+                     DeployPlatform="LOCAL">
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/Resolucion4DS"/>
+      <Security AppModuleJndiName="model.Materias"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="MateriasShared" jbo.project="model.Model" ApplicationName="model.Materias"
+                     DeployPlatform="LOCAL">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="OracleApps" JDBCDataSource="java:comp/env/jdbc/Resolucion4DS"/>
+      <Security AppModuleJndiName="model.Materias"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+</BC4JConfig>

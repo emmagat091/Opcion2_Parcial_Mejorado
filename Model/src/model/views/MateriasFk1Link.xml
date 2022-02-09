@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="MateriasFk1Link"
+  Version="12.2.1.22.48"
+  InheritPersonalization="merge"
+  EntityAssociation="model.entities.MateriasFk1Assoc">
+  <ViewLinkDefEnd
+    Name="CursosView"
+    Cardinality="1"
+    Source="true"
+    Owner="model.views.CursosView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_finderName" Value="CursosView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.views.CursosView.Id"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="MateriasView"
+    Cardinality="-1"
+    Owner="model.views.MateriasView">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="MateriasView"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.views.MateriasView.Cursoid"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>
