@@ -1,0 +1,5 @@
+incorporación:
+
+-Task flow.
+-fragmentos de página.
+-capa seguridad a nivel usuario : password:ayi
