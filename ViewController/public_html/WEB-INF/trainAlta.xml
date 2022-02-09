@@ -20,12 +20,29 @@
       <page>/MateriasPorCurso.jsff</page>
       <train-stop/>
     </view>
+    <task-flow-return id="loginout">
+      <outcome>
+        <name>loginout</name>
+        <commit/>
+      </outcome>
+    </task-flow-return>
     <train/>
     <control-flow-rule id="__3">
       <from-activity-id>MateriasPorCurso</from-activity-id>
       <control-flow-case id="__1">
         <from-outcome>Back</from-outcome>
         <to-activity-id>NuevoCurso</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__4">
+        <from-outcome>loginOut</from-outcome>
+        <to-activity-id>loginout</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>NuevoCurso</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>loginOut</from-outcome>
+        <to-activity-id>loginout</to-activity-id>
       </control-flow-case>
     </control-flow-rule>
     <use-page-fragments/>

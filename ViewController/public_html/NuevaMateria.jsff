@@ -32,7 +32,7 @@
     <f:facet name="footer">
       <af:panelGroupLayout layout="vertical" id="pgl1">
         <af:panelGroupLayout layout="horizontal" id="pgl2">
-          <af:button actionListener="#{bindings.CreateWithParams.execute}" text="Nuevo Materia"
+          <af:button actionListener="#{bindings.CreateWithParams.execute}" text="Nueva Materia"
                      disabled="#{!bindings.CreateWithParams.enabled}" id="b8" partialTriggers="b8"/>
           <af:button actionListener="#{bindings.Commit.execute}" text="Guardar" id="b6"/>
           <af:button actionListener="#{bindings.Rollback.execute}" text="Cancelar" immediate="true" id="b7">

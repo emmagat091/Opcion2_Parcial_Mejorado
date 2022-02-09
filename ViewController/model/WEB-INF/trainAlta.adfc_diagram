@@ -18,9 +18,9 @@
       <property
          name="start">true</property>
       <property
-         name="x">435.5</property>
+         name="x">449.5</property>
       <property
-         name="y">62.821777</property>
+         name="y">-11.580566</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>NuevoCurso&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
@@ -56,11 +56,11 @@
       <property
          name="pageFragment">true</property>
       <property
-         name="x">771.0498</property>
+         name="x">799.0498</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>MateriasPorCurso&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">23.224121</property>
+         name="y">-11.477051</property>
       <property
          name="page">/MateriasPorCurso.jsff</property>
       <property
@@ -74,7 +74,7 @@
       from="View10"
       to="View11">
       <property
-         name="sdm:polyPoints">R50,520.4253,62.47119,520.4253,-11.551758,L50</property>
+         name="sdm:polyPoints">R50,527.4253,-11.931152,527.4253,-11.551758,L50</property>
    </TrainFlow>
    <TrainFlow
       islink="true"
@@ -82,7 +82,7 @@
       from="View11"
       to="View12">
       <property
-         name="sdm:polyPoints">R50,688.2002,-11.551758,688.2002,22.873535,L50</property>
+         name="sdm:polyPoints">R50,702.2002,-11.551758,702.2002,-11.827637,L50</property>
    </TrainFlow>
    <ControlFlowCase
       islink="true"
@@ -96,6 +96,41 @@
       <property
          name="fromsrcid">__3</property>
       <property
-         name="sdm:polyPoints">B50,771.0498,116.47119,435.5,116.47119,B50</property>
+         name="sdm:polyPoints">B44,795.5498,42.172363,449.5,42.172363,B50</property>
+   </ControlFlowCase>
+   <TaskFlowReturn
+      id="TaskFlowReturn11">
+      <property
+         name="activityId">loginout</property>
+      <property
+         name="x">265.0</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>loginout&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  loginout&lt;/p></property>
+      <property
+         name="y">450.88477</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="exceptionHandler">false</property>
+   </TaskFlowReturn>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase12"
+      from="View12"
+      to="TaskFlowReturn11">
+      <property
+         name="fromOutcome">loginOut</property>
+      <property
+         name="sdm:polyPoints">B56,802.5498,450.53418,R50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase14"
+      from="View10"
+      to="TaskFlowReturn11">
+      <property
+         name="fromOutcome">loginOut</property>
+      <property
+         name="sdm:polyPoints">L50,265.0,-11.931152,T50</property>
    </ControlFlowCase>
 </SDM>
